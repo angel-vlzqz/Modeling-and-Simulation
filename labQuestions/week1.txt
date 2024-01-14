@@ -1,0 +1,12 @@
+Based on your initial understanding of ODE, identify two topics related 
+to the design and functioning of computer system, for which ODEs are relevant 
+and beneficial. Describe the use of ODE in this context and provide concrete 
+examples.
+
+Ordinary differential equestions are used in computer science in computer
+graphics, machine learning, and probability, to name a few. ODE's may be used
+in computer graphics to generate smooth animations and rendering the motion of
+objects. ODE's are also utilized in machine learning algorithms through optimization such as gradient descent, which assists in finding a local minimum of a set.
+
+bonus: i just figured out that problems written in sigma notation are simple for-
+loops.
