@@ -1,0 +1,25 @@
+How would you write a computer program to solve an ODE? Outline the main
+steps and provide a code skeleton for the program. (i.e. variables and
+classes & methods stubs - no implementation).
+
+to begin with, we need to define the ODE we want to solve. Once we have
+the ODE, we need to define the initial conditions. These conditions may
+be given by the ODE itself, or by input from the user. Once we have the
+ODE and the initial conditions, we can utilize the scipy library to solve
+the ODE. The scipy library has a function called odeint which takes in
+the ODE, the initial conditions, and the time steps. The function returns
+the solution to the ODE. We can then plot the solution to the ODE. By using
+python, we can easily plot the solution to the ODE using the matplotlib
+which plots using html.
+
+import scipy
+import matplotlib
+
+def solve(initial conditions):
+  list ODE function
+  return result
+
+solve ode using odeint function as odeint(ODE, initial conditions, time steps)
+
+plot solution using matplotlib
+plt.plot(time steps, solution)
