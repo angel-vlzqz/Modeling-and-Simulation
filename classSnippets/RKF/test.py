@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt 
-import time
 from RKF import rkf
 import matplotlib.animation as animation
+import time
 
 def lorenz(t,u):
     s=10

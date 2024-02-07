@@ -1,0 +1,44 @@
+Research the following two topics:
+1. packages available in python for solving ODEs
+2. techniques for measuring computing time of a program written in python
+
+Write a brief summary of your findings.
+
+## Packages available in python for solving ODEs
+There are several packages available in python for solving ODEs. Some of the 
+most popular ones are:
+1. Scipy: Scipy is a scientific computing library that provides a module called 
+   `integrate` which contains several functions for solving ODEs. The most 
+   commonly used function is `odeint` which can solve systems of first-order 
+   ordinary differential equations. Scipy also provides a function called 
+   `ode` which can solve systems of first-order ordinary differential equations 
+   using a variety of numerical methods.
+2. Numpy: Numpy is a numerical computing library that provides a module called 
+   `linalg` which contains functions for solving linear systems of equations. 
+   Numpy also provides a function called `solve_ivp` which can solve systems of 
+   first-order ordinary differential equations using a variety of numerical 
+   methods.
+3. Sympy: Sympy is a symbolic mathematics library that provides a module called
+   `ode` which contains functions for solving ODEs symbolically. Sympy can 
+   solve systems of first-order ordinary differential equations using a variety 
+   of methods including exact, series, and numerical methods.
+
+## Techniques for measuring computing time of a program written in python
+There are several techniques for measuring the computing time of a program
+written in python. Some of the most commonly used techniques are:
+1. Using the `time` module: The `time` module in python provides a function 
+   called `time` which returns the current time in seconds since the epoch. 
+   This function can be used to measure the time taken by a program to execute 
+   by recording the start time before the program starts and the end time after 
+   the program finishes, and then calculating the difference between the two 
+   times.
+2. Using the `timeit` module: The `timeit` module in python provides a function
+   called `timeit` which can be used to measure the time taken by a program to 
+   execute by running the program multiple times and averaging the time taken 
+   for each run. This can be useful for measuring the time taken by small 
+   snippets of code or functions.
+3. Using the `cProfile` module: The `cProfile` module in python provides a
+   function called `run` which can be used to measure the time taken by a 
+   program to execute by profiling the program and recording the time taken by 
+   each function and method. This can be useful for measuring the time taken by 
+   large programs or complex functions.
