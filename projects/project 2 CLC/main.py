@@ -1,6 +1,7 @@
 # Jordan Scott, Angel Velazquez
 # 02/04/2024
 
+import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 from math import e
@@ -11,7 +12,7 @@ def t4(k1, k2, k3, k4):
 
 def dydx(x, y):
     return y / (e**x - 1)
-    
+
 def rungeKutta(x0, y0, h):
     k1 = dydx(x0, y0)
     k2 = dydx(x0 + .5*h, y0 + .5*h * k1)
@@ -20,18 +21,8 @@ def rungeKutta(x0, y0, h):
     y = y0 + h * t4(k1, k2, k3, k4)
     return y
 
-# Driver method
-h = 0.02
-x0 = 1
-
-y0 = 5
-print(f'x0: {x0}')
-
-x_values = []
-y_values = []
-
 def plot_recursive(x, y, count):
-    if count > 980:
+    if count > 980 or x > 300:
         return
     
     print(f'y{count}: {y}')
@@ -46,15 +37,37 @@ def plot_recursive(x, y, count):
     
     plot_recursive(x_next, y_next, count + 1)
 
-start_time = time.time()
-plot_recursive(x0, y0, 0)
-end_time = time.time()
-
-plt.plot(x_values, y_values, 'ro')
-plt.show()
-
-computing_time = end_time - start_time
-computational_steps = 980  # maximum recursion depth allowed by python
-
-print(f"Computational Steps: {computational_steps}")
-print(f"Computing Time: {computing_time} seconds")
+if __name__ == "__main__":
+    # Driver method
+    h = 0.02
+    x0 = 1
+    y0 = 5
+    x_values = []
+    y_values = []
+    
+    start_time = time.time()
+    plot_recursive(x0, y0, 0)
+    end_time = time.time()
+    
+    computing_time = end_time - start_time
+    computational_steps = 980  # maximum recursion depth allowed by python
+    
+    print(f"Computational Steps: {computational_steps}")
+    print(f"Computing Time: {computing_time} seconds")
+    
+    # Plot using odeint
+    x_odeint = np.linspace(0, 20, 100)
+    y_odeint = odeint(dydx, y0, x_odeint)
+    
+    # initialize the graph
+    figure, axis = plt.subplots(1, 3, sharey=True)
+    axis[0].plot(x_values, y_values, 'r-', label='Runge-Kutta')
+    axis[0].set_title('Runge-Kutta')
+    axis[1].plot(x_odeint, y_odeint, 'b-', label='Odeint')
+    axis[1].set_title('Odeint True Solution')
+    
+    axis[2].plot(x_values, y_values, 'r-', label='Runge-Kutta')
+    axis[2].plot(x_odeint, y_odeint, 'b-', label='Odeint')
+    axis[2].set_title('Runge-Kutta & Odeint')
+    
+    plt.show()
