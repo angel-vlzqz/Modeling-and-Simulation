@@ -13,6 +13,9 @@ def t4(k1, k2, k3, k4):
 def dydx(x, y):
     return y / (e**x - 1)
 
+def dydx2(y, x):
+    return y / (e**x - 1)
+
 def rungeKutta(x0, y0, h):
     k1 = dydx(x0, y0)
     k2 = dydx(x0 + .5*h, y0 + .5*h * k1)
@@ -56,8 +59,8 @@ if __name__ == "__main__":
     print(f"Computing Time: {computing_time} seconds")
     
     # Plot using odeint
-    x_odeint = np.linspace(0, 20, 100)
-    y_odeint = odeint(dydx, y0, x_odeint)
+    x_odeint = np.linspace(x0, 20, 1000)
+    y_odeint = odeint(dydx2, y0, x_odeint)
     
     # initialize the graph
     figure, axis = plt.subplots(1, 3, sharey=True)
