@@ -24,22 +24,6 @@ def rungeKutta(x0, y0, h):
     y = y0 + h * t4(k1, k2, k3, k4)
     return y
 
-def plot_recursive(x, y, count):
-    if count > 980 or x > 300:
-        return
-    
-    print(f'y{count}: {y}')
-    print(f'x{count}: {x}')
-    print(f'True Solution: {odeint(dydx, y, [x])}\n')
-    
-    x_values.append(x)
-    y_values.append(y)
-    
-    y_next = rungeKutta(x, y, h)
-    x_next = x + h
-    
-    plot_recursive(x_next, y_next, count + 1)
-
 if __name__ == "__main__":
     # Driver method
     h = 0.02
@@ -47,20 +31,30 @@ if __name__ == "__main__":
     y0 = 5
     x_values = []
     y_values = []
-    
+    x_odeint = np.linspace(x0, 20, 1000)
+    y_odeint = odeint(dydx2, y0, x_odeint)
+
     start_time = time.time()
-    plot_recursive(x0, y0, 0)
+    
+    for count in range(980):
+        print(f'y{count}: {y0}')
+        print(f'x{count}: {x0}')
+        print(f'True Solution: {odeint(dydx, y0, [x0])}\n')
+        
+        x_values.append(x0)
+        y_values.append(y0)
+        
+        y0 = rungeKutta(x0, y0, h)
+        x0 += h
+    
     end_time = time.time()
     
     computing_time = end_time - start_time
-    computational_steps = 980  # maximum recursion depth allowed by python
+    computational_steps = count + 1
     
     print(f"Computational Steps: {computational_steps}")
     print(f"Computing Time: {computing_time} seconds")
     
-    # Plot using odeint
-    x_odeint = np.linspace(x0, 20, 1000)
-    y_odeint = odeint(dydx2, y0, x_odeint)
     
     # initialize the graph
     figure, axis = plt.subplots(1, 3, sharey=True)
@@ -74,3 +68,4 @@ if __name__ == "__main__":
     axis[2].set_title('Runge-Kutta & Odeint')
     
     plt.show()
+    
