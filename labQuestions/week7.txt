@@ -1,0 +1,32 @@
+Choose a digital storage medium and identify factors that affect the
+degredation of stored data over time.
+
+In this example, we will use a USB flash drive as the digital storage medium. 
+The factors that affect the degredation of stored data over time include 
+temperature, humidity, light, magnetic fields, physical damage, and time.
+All of these factors can cause the flash drive to corrode and the
+data to become unreadable.
+
+Explain how you would approach developing a system of ODEs that could model
+the degredation process. Present a simple example of such a system.
+
+To develop a system of ODEs that could model the degredation process, we would
+need to consider the effects of each factor on the flash drive and the stored
+data. For example, we could develop a system of ODEs that models the
+corrosion of the flash drive due to temperature, humidity, and time. The
+system could include equations that describe the rate of corrosion as a
+function of these factors, and how the corrosion affects the readability
+of the stored data.
+
+For example, the system of ODEs could include the following equations:
+dC/dt = k1 * T * H
+where C is the corrosion of the flash drive, T is the temperature, H is the
+humidity, and k1 is a constant that represents the rate of corrosion due to
+temperature and humidity.
+
+dD/dt = k2 * C * t
+where D is the readability of the stored data, t is time, and k2 is a constant
+that represents the rate of degradation of the stored data due to corrosion.
+
+These equations could be used to model the degredation process of the flash
+drive and the stored data over time.
