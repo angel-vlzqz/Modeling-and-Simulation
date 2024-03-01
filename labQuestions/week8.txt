@@ -1,0 +1,14 @@
+How would you visualize changes in data integrity of a digital storage system?
+Propose an approach to visualization that can be implemented in a computer
+program with the appropriate graphics packages. In your approach, be mindful
+that the visualization must be based on quantitative data that represents
+various metrics of data integrity in the storage medium. Provide diagrams
+and screenshots to support your proposal.
+
+I would visualize changes in data integrity of a digital storage system by
+using a ling graph. The x-axis would represent time, and the y-axis would
+represent the data integrity of the storage system. The line graph would
+hava a line for each metric of data integrity that I want to visualize. For
+example, the graph could be updated in real time as the data integrity
+of the storage system chages. It would also be color-coded to make it easy
+to distinguish between the different metrics of data integrity.
