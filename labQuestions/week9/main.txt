@@ -1,0 +1,45 @@
+Describe three examples of dynamical systems displaying self-organized
+criticality. Explain the nature of SOC in each example using formal 
+mathematical notation. use graphs and/or diagrams to illustrate you explanations.
+
+One example of a dynamical system displaying self-organized criticality is the
+Bak-Tang-Wiesenfeld sandpile model. In this model, a grid of cells is used to
+represent a pile of sand. At each time step, a single grain of sand is added to
+a random cell. If the number of grains in a cell exceeds a certain threshold,
+the cell becomes unstable and topples, sending one grain of sand to each of its
+four neighbors. This process can cause a chain reaction of topplings, leading to
+a power-law distribution of avalanche sizes. The system self-organizes to a
+critical state, where the distribution of avalanches is scale-invariant.
+
+Another example of a dynamical system displaying self-organized criticality is
+the forest-fire model. In this model, a grid of cells is used to represent a
+forest, with each cell being either empty, containing a tree, or on fire. At each
+time step, a tree can spontaneously catch fire with a certain probability, and
+the fire can spread to neighboring trees. If a tree is on fire, it burns for a
+certain number of time steps before being extinguished. This process can lead to
+a power-law distribution of fire sizes, with large fires being rare but
+potentially catastrophic. The system self-organizes to a critical state, where
+the distribution of fires is scale-invariant.
+
+A third example of a dynamical system displaying self-organized criticality is
+the sandpile model with a driving force. In this model, a grid of cells is used
+to represent a pile of sand, and grains of sand are added to a random cell at
+each time step. However, in addition to the random addition of sand, a constant
+driving force is applied to the system, causing sand to flow off the edge of the
+grid. This driving force can lead to a steady state where the sandpile is
+constantly on the verge of toppling, resulting in a power-law distribution of
+avalanche sizes. The system self-organizes to a critical state, where the
+distribution of avalanches is scale-invariant.
+
+In each of these examples, the self-organized criticality arises from the
+interaction of local rules and global dynamics. The system reaches a critical
+state where small perturbations can lead to large-scale avalanches or fires,
+resulting in a scale-invariant distribution of event sizes. This critical state
+is characterized by power-law behavior, with the probability of large events
+decreasing as a power of the event size. The self-organized criticality in these
+systems can be described using formal mathematical notation, such as the
+exponents of the power-law distributions and the critical exponents characterizing
+the behavior near the critical point. Graphs and diagrams can be used to
+illustrate the power-law distributions and the scale-invariant behavior of the
+systems, showing how the self-organized criticality emerges from the interaction
+of local and global dynamics.
