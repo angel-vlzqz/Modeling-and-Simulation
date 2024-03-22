@@ -30,13 +30,40 @@ for i in range(num_steps):
     zs[i + 1] = zs[i] + (z_dot * dt)
 
 fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
 
-ax.plot(xs, ys, zs, lw=0.5)
-ax.set_xlabel("X Axis")
-ax.set_ylabel("Y Axis")
-ax.set_zlabel("Z Axis")
-ax.set_title("Lorenz Attractor")
+# Plot x-axis
+ax1 = fig.add_subplot(131)
+ax1.plot(range(num_steps + 1), xs)
+ax1.set_xlabel("Time")
+ax1.set_ylabel("X Axis")
+ax1.set_title("X Axis")
 
+# Plot y-axis
+ax2 = fig.add_subplot(132)
+ax2.plot(range(num_steps + 1), ys)
+ax2.set_xlabel("Time")
+ax2.set_ylabel("Y Axis")
+ax2.set_title("Y Axis")
+
+# Plot z-axis
+ax3 = fig.add_subplot(133)
+
+# Ask user for input for the r variable
+r = float(input("Enter the value of r: "))
+
+ax3.plot(range(num_steps + 1), zs)
+ax3.set_xlabel("Time")
+ax3.set_ylabel("Z Axis")
+ax3.set_title("Z Axis")
+
+# 3D plot
+fig2 = plt.figure()
+ax4 = fig2.add_subplot(111, projection='3d')
+ax4.plot(xs, ys, zs)
+ax4.set_xlabel("X Axis")
+ax4.set_ylabel("Y Axis")
+ax4.set_zlabel("Z Axis")
+ax4.set_title("Lorenz Attractor")
+
+plt.tight_layout()
 plt.show()
-
