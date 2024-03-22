@@ -34,7 +34,7 @@ fig = plt.figure()
 # Plot x-axis
 ax1 = fig.add_subplot(131)
 ax1.plot(range(num_steps + 1), xs)
-ax1.set_xlabel("Time")
+ax1.set_xlabel("Time (ms)")
 ax1.set_ylabel("X Axis")
 ax1.set_title("X Axis")
 
