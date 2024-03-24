@@ -1,0 +1,11 @@
+How would you visualize the fragmentation of a file system? Propose an 
+approach that can be implemented in a computer program with appropriate 
+graphing capabilities. Conduct initial proof-of-concept experiments, and 
+provide at least two examples of your approach to visualization.
+
+I would visualize the fragmentation of a file system by creating a
+graphical representation of the file system. The file system would be
+represented as a tree, with the root node representing the file system
+itself, and the child nodes representing the files and directories in
+the file system. The size of each node would be proportional to the size
+of the file or directory it represents.
