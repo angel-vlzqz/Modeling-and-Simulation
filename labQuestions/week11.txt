@@ -1,0 +1,39 @@
+How would you use a Taylor polynomial in order to numerically solve a 
+nonlinear differential equation? Choose a differential equation and illustrate
+your explanation by showing all the steps toward deriving the solution. Use 
+formal mathematical notation.
+
+I would use a Taylor polynomial to solve a nonlinear differential equation by
+approximating the solution to the differential equation with a Taylor 
+polynomial. The Taylor polynomial would be used to approximate the solution to
+the differential equation, and the higher order terms of the Taylor polynomial
+would be used to improve the accuracy of the approximation.
+
+For example, consider the nonlinear differential equation:
+
+dy/dx = y^2 - x
+
+To solve this differential equation using a Taylor polynomial, we can start by
+expanding the solution y(x) as a Taylor series around a point x0:
+
+y(x) = y(x0) + (dy/dx)(x0)(x-x0) + (d^2y/dx^2)(x0)(x-x0)^2/2! + ...
+
+We can then Substitute this Taylor series into the differential equation and 
+equate coefficients of like powers of (x-x0) to obtain a system of equations. 
+We can solve this system of equations to find the coefficients of the Taylor 
+polynomial approximation to the solution y(x).
+
+For example, if we choose x0 = 0 and y(0) = 1 as initial conditions, we can
+find the coefficients of the Taylor polynomial approximation to the solution 
+y(x) by solving the following system of equations:
+
+1 = 1
+dy/dx = 1
+d^2y/dx^2 = 2
+
+Substitute these coefficients back into the Taylor polynomial to obtain the
+approximation to the solution y(x). This approximation can be used to
+numerically solve the nonlinear differential equation and obtain an
+approximate solution to the differential equation. The higher order terms of
+the Taylor polynomial can be used to improve the accuracy of the approximation.
+
