@@ -2,29 +2,30 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
-'''`PART 1A'''
+'''PART 1A'''
 # Define the Taylor series function
 def taylor_series_func(x):
-    return -x**4 / 12 - x + 1
+    return 1 - x - (1/3)*x**3 - (1/12)*x**4
 
 # Evaluate at x = 3.5
 x_value = 3.5
 y_value = taylor_series_func(x_value)
 
 # Visualization setup
-x_values = np.linspace(-2, 4, 400)  # Range for visualization
+x_values = np.linspace(0, 10, 400)  # Range for visualization
 y_taylor = taylor_series_func(x_values)
 
 # Plotting the Taylor series approximation
 plt.figure(figsize=(10, 6))
 plt.plot(x_values, y_taylor, label='Taylor Series Approximation up to n=4')
 plt.scatter([x_value], [y_value], color='red')  # Point at x = 3.5
-plt.text(x_value, y_value, f'y(3.5) ≈ {y_value:.2f}', verticalalignment='bottom', horizontalalignment='right')
+plt.text(x_value, y_value, f'y(3.5) ≈ {y_value:.4f}', verticalalignment='bottom', horizontalalignment='right')
 plt.title('Taylor Series Approximation of the Solution')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
 plt.grid(True)
+
 
 '''PART 1B'''
 # Define the Taylor polynomial function
@@ -46,8 +47,8 @@ plt.ylabel('y')
 plt.legend()
 plt.grid(True)
 
-'''PART 2'''
 
+'''PART 2'''
 # Define the system of ODEs
 def system(u, x):
     u1, u2 = u  # u1 = y, u2 = y'
