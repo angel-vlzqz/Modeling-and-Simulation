@@ -30,7 +30,7 @@ plt.grid(True)
 '''PART 1B'''
 # Define the Taylor polynomial function
 def taylor_poly_func(x_val):
-    return x_val - 5.5 * (x_val - 3)**2 + 3
+    return 6 + x_val - 5.5 * (x_val - 3)**2 + 3
 
 # Visualization setup
 x_range = np.linspace(0, 6, 400)  # Range for visualization
