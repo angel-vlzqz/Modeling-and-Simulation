@@ -4,29 +4,28 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
-
 '''PART 1A'''
 # Define the symbols
 x = sp.symbols('x')
 y = sp.Function('y')(x)
 
 # Define the differential equation
-diff_eq = sp.Eq(y.diff(x, x) - (x-2)*y.diff(x) + 2*y, 0)
+diff_eq = sp.Eq(y.diff(x, x) - 2*x*y.diff(x) + x**2*y, 0)
 
 # Solve the differential equation
 sol = sp.dsolve(diff_eq, y)
 
 # Define the initial conditions
-initial_conditions = {sol.args[1].subs(x, 3): 6, sol.args[1].diff(x).subs(x, 3): 1}
+initial_conditions = {sol.args[1].subs(x, 0): 1, sol.args[1].diff(x).subs(x, 0): -1}
 
-# Calculate the Taylor expansion of y(x) up to n <= 2
-taylor_expansion = sol.args[1].series(x, 3, 3).removeO()
+# Calculate the Taylor expansion of y(x) up to n <= 4
+taylor_expansion = sol.args[1].series(x, 0, 5).removeO()
 
 # Calculate the value of y at x = 3.5
 y_value = taylor_expansion.subs(x, 3.5)
 
 # Print the results
-print("Taylor expansion of y(x) up to n <= 2:")
+print("Taylor expansion of y(x) up to n <= 4:")
 print(taylor_expansion)
 print("Value of y at x = 3.5:")
 print(y_value)
@@ -61,45 +60,42 @@ plt.title('Taylor Series Approximation')
 
 
 '''PART 1B'''
-def derivative(f, x, h=1e-5):
-    return (f(x + h) - f(x - h)) / (2 * h)
 
-def second_derivative(f, x, h=1e-5):
-    return (f(x + h) - 2*f(x) + f(x - h)) / (h ** 2)
-
-def taylor_polynomial(x, x0, y0, y1, y2):
-    return y0 + y1 * (x - x0) + 0.5 * y2 * (x - x0) ** 2
-
-# Given differential equation
-def equation(x, y, yp):
-    return yp - (x - 2) * y + 2 * y
-
-# Initial conditions
-x0 = 3
-y0 = 6
-yp0 = 1
-
-# Compute second derivative and evaluate it at x0
-ypp0 = second_derivative(lambda x: equation(x, taylor_polynomial(x, x0, y0, yp0, 0), taylor_polynomial(x, x0, y0, yp0, 1)), x0)
-
-# Define the Taylor polynomial function
-def taylor_series(x):
-    return taylor_polynomial(x, x0, y0, yp0, ypp0)
-
-# Generate x values for plotting
-x_values = np.linspace(2, 4, 400)
-
-# Plot the function and its Taylor polynomial
-plt.figure()
-plt.plot(x_values, taylor_series(x_values), label="Taylor Polynomial (2nd order)")
-plt.xlabel('x')
-plt.ylabel('y')
-plt.title('Second Order Taylor Polynomial')
-plt.legend()
-plt.grid(True)
-plt.show()
+## Define the differential equation for Part 1B
+#diff_eq_1b = sp.Eq(y.diff(x, x) - (x - 2)*y.diff(x) + 2*y, 0)
+#
+## Solve the differential equation
+#sol_1b = sp.dsolve(diff_eq_1b, y)
+#
+## Define the initial conditions for Part 1B
+#initial_conditions_1b = {sol_1b.args[1].subs(x, 3): 6, sol_1b.args[1].diff(x).subs(x, 3): 1}
+#
+## Calculate the Taylor expansion of y(x) up to the second order for Part 1B
+#taylor_expansion_1b = sol_1b.args[1].series(x, 3, n=2)
+#
+## Evaluate the Taylor polynomial at x = 3
+#y_3 = taylor_expansion_1b.removeO().subs(x, 3)
+#
+## Define the Taylor polynomial approximation function for Part 1B
+#def taylor_polynomial(x):
+#    return y_3
+#
+## Define the interval of convergence for Part 1B
+#x_values_1b = np.linspace(2.5, 3.5, 100)
+#
+## Plot the original function and the Taylor polynomial for Part 1B
+#plt.figure()
+#plt.plot(x_values_1b, original_function(x_values_1b), label='Original Function')
+#plt.plot(x_values_1b, taylor_polynomial(x_values_1b), label='Second Order Taylor Polynomial (Part 1B)')
+#
+#plt.xlabel('x')
+#plt.ylabel('y')
+#plt.legend()
+#plt.title('Taylor Polynomial Approximation (Part 1B)')
+#plt.show()
 
 '''PART 2'''
+
 # Define the range of x values
 x_values = np.linspace(-2, 2, 100)
 
