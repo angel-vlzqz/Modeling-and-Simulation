@@ -1,0 +1,49 @@
+What are some of the key factors that influence the performance of a computer
+system? Choose two such factors and create a simple differential equation
+based model for a computer system's performance, based on these two factors.
+Provide a full mathematical description of the model, and outline the steps
+you would need to implement in order to fully simulate the system's performance
+
+Some factors that influence the performance of a computer system are the
+number of processes running on the system and the amount of memory available
+to the system. A simple differential equation based model for a computer
+system's performance can be created by considering the rate at which processes
+are being created and the rate at which processes are being completed. Let
+P(t) be the number of processes running on the system at time t, and let
+M(t) be the amount of memory available to the system at time t. The
+differential equation based model for the computer system's performance can be
+described by the following system of differential equations:
+
+dP/dt = k1 - k2 * P(t)
+dM/dt = k3 - k4 * P(t)
+
+where k1, k2, k3, and k4 are constants that represent the rates at which
+processes are being created, processes are being completed, memory is being
+allocated, and memory is being deallocated, respectively.
+
+To fully simulate the system's performance, the following steps would need to
+be implemented:
+
+1. Define the initial conditions for the system, such as the initial number of
+processes running on the system and the initial amount of memory available to
+the system.
+
+2. Choose appropriate values for the constants k1, k2, k3, and k4 based on the
+specific characteristics of the computer system being modeled.
+
+3. Implement a numerical method, such as Euler's method or Runge-Kutta method,
+to solve the system of differential equations over a specified time interval.
+
+4. Simulate the system's performance by solving the system of differential
+equations and tracking the evolution of the number of processes running on the
+system and the amount of memory available to the system over time.
+
+5. Analyze the simulation results to gain insights into the system's
+performance and identify potential areas for improvement, such as optimizing
+the allocation and deallocation of memory or adjusting the rates at which
+processes are being created and completed.
+
+By following these steps, a comprehensive simulation of a computer system's
+performance can be conducted, providing valuable insights into the factors
+that influence the system's performance and potential strategies for
+optimizing its operation. 
