@@ -1,0 +1,38 @@
+Provide two examples of phenomena that can be modeled with a lorenz attractor.
+Why is the Lorenz attractor a useful mathematical tool in these instances, and 
+how does it help in understanding the phenomena? Use formal mathematical 
+notation in your explanation.
+
+The Lorenz attractor is a set of chaotic solutions of the Lorenz system which, 
+when plotted, resemble a butterfly or figure eight. The Lorenz system is a 
+system of ordinary differential equations first studied by Edward Lorenz. 
+It is notable for having chaotic solutions for certain parameter values and 
+initial conditions. In particular, the Lorenz attractor is a set of chaotic 
+solutions of the Lorenz system which, when plotted, resemble a butterfly or 
+figure eight.
+
+The Lorenz attractor is a useful mathematical tool in modeling phenomena
+such as weather patterns and fluid dynamics. In the case of weather patterns,
+the Lorenz attractor can help in understanding the chaotic and unpredictable
+nature of weather systems. The Lorenz system can be used to model the
+nonlinear dynamics of the atmosphere, and the attractor can provide insights
+into the sensitivity of weather systems to initial conditions. By studying
+the behavior of the Lorenz attractor, meteorologists can gain a better
+understanding of the complex interactions that drive weather patterns.
+
+In the case of fluid dynamics, the Lorenz attractor can help in modeling
+turbulent flow and chaotic behavior in fluids. The Lorenz system can be used
+to model the nonlinear dynamics of fluid flow, and the attractor can provide
+insights into the complex and unpredictable behavior of fluids. By studying
+the behavior of the Lorenz attractor, engineers and scientists can gain a
+better understanding of the dynamics of fluid flow and develop more accurate
+models for predicting and controlling turbulent flow.
+
+In both cases, the Lorenz attractor is a useful mathematical tool because
+it provides a visual representation of the chaotic and unpredictable behavior
+of the systems being modeled. The attractor helps in understanding the
+sensitivity of the systems to initial conditions and the complex interactions
+that drive their behavior. By studying the behavior of the Lorenz attractor,
+researchers can gain insights into the underlying dynamics of the systems
+and develop more accurate models for predicting and controlling their behavior.
+
